@@ -63,11 +63,29 @@
     <Compile Include="FeesManagement.Designer.cs">
       <DependentUpon>FeesManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Homework.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Homework.Designer.cs">
+      <DependentUpon>Homework.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeworkDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeworkDetails.Designer.cs">
+      <DependentUpon>HomeworkDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Notification.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Notification.Designer.cs">
       <DependentUpon>Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificationDetails.Designer.cs">
+      <DependentUpon>NotificationDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="PARENTS.cs">
       <SubType>Form</SubType>
@@ -119,6 +137,12 @@
     <Compile Include="TEACHER.Designer.cs">
       <DependentUpon>TEACHER.cs</DependentUpon>
     </Compile>
+    <Compile Include="TestResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestResult.Designer.cs">
+      <DependentUpon>TestResult.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,8 +170,17 @@
     <EmbeddedResource Include="FeesManagement.resx">
       <DependentUpon>FeesManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Homework.resx">
+      <DependentUpon>Homework.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeworkDetails.resx">
+      <DependentUpon>HomeworkDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Notification.resx">
       <DependentUpon>Notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationDetails.resx">
+      <DependentUpon>NotificationDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PARENTS.resx">
       <DependentUpon>PARENTS.cs</DependentUpon>
@@ -183,6 +216,9 @@
     <EmbeddedResource Include="TEACHER.resx">
       <DependentUpon>TEACHER.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TestResult.resx">
+      <DependentUpon>TestResult.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateProfile.resx">
       <DependentUpon>UpdateProfile.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,6 +248,11 @@
     <None Include="Resources\loin.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\2.jpg" />
+    <None Include="Resources\21.jpg" />
+    <None Include="Resources\images.jpg" />
+    <None Include="Resources\11.jpg" />
+    <None Include="Resources\111.jpg" />
     <Content Include="tmp2E74.tmp.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

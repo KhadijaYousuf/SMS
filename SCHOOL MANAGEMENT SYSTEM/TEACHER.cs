@@ -20,7 +20,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             Form user = new User();
             user.ShowDialog();
         }
@@ -35,32 +35,23 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             System.Diagnostics.Process.Start("calc.exe");
         }
 
-        string HId = "HW#";
         private void TEACHER_Load(object sender, EventArgs e)
         {
-            GC();
+            
         }
 
-        private void GC()
+        private void updateHomeworkToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ACER\Documents\SMS.mdf;Integrated Security=True;Connect Timeout=30");
-            con.Open();
-            SqlCommand cmd = new SqlCommand("select count(HomeWorkID) from Homework", con);
-            int i = Convert.ToInt32(cmd.ExecuteScalar());
-            con.Close();
-            i++;
-            textBox1.Text = HId + i.ToString();
+            this.Hide();
+            Form user = new Homework();
+            user.ShowDialog();
         }
 
-        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        private void newResultToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ACER\Documents\SMS.mdf;Integrated Security=True;Connect Timeout=30");
-            con.Open();
-            SqlCommand cmd = new SqlCommand("insert into Homework(HomeWorkID, Class, Subject, Date, Homework) values('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "','" + dateTimePicker1.Text + "', '" + richTextBox1.Text + "')", con);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            MessageBox.Show("HOMEWORK UPDATED SUCCESSFULLY");
+            this.Hide();
+            TestResult tr = new TestResult();
+            tr.ShowDialog();
         }
     }
 }

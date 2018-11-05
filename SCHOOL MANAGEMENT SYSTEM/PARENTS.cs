@@ -41,7 +41,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             {
                 SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ACER\Documents\SMS.mdf;Integrated Security=True;Connect Timeout=30");
                 con.Open();
-                SqlCommand cmd = new SqlCommand("select *from FeesAdmin where SID='" + textBox1.Text + "'", con);
+                SqlCommand cmd = new SqlCommand("select *from FeesAdmin where StudentId='" + textBox1.Text + "'", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable DT = new DataTable();
                 da.Fill(DT);
@@ -50,7 +50,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             }
             else
             {
-                MessageBox.Show("FAILED");
+                MessageBox.Show("Invalid Student ID");
             }
         }
 

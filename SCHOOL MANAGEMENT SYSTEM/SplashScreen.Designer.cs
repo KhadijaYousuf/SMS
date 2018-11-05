@@ -41,19 +41,20 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(0, 320);
+            this.progressBar1.Location = new System.Drawing.Point(0, 340);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(433, 36);
+            this.progressBar1.Size = new System.Drawing.Size(433, 16);
             this.progressBar1.TabIndex = 0;
             // 
             // SplashScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::SCHOOL_MANAGEMENT_SYSTEM.Properties.Resources.SS;
+            this.BackgroundImage = global::SCHOOL_MANAGEMENT_SYSTEM.Properties.Resources._21;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(433, 356);
             this.Controls.Add(this.progressBar1);
+            this.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SplashScreen";
             this.ShowInTaskbar = false;

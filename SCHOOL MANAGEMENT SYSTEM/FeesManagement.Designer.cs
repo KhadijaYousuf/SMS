@@ -49,18 +49,22 @@
             // 
             // reciep
             // 
-            this.reciep.Location = new System.Drawing.Point(301, 290);
+            this.reciep.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.reciep.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.reciep.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reciep.ForeColor = System.Drawing.Color.Black;
+            this.reciep.Location = new System.Drawing.Point(215, 441);
             this.reciep.Margin = new System.Windows.Forms.Padding(2);
             this.reciep.Name = "reciep";
-            this.reciep.Size = new System.Drawing.Size(57, 24);
+            this.reciep.Size = new System.Drawing.Size(68, 23);
             this.reciep.TabIndex = 32;
-            this.reciep.Text = "Save";
-            this.reciep.UseVisualStyleBackColor = true;
+            this.reciep.Text = "SAVE";
+            this.reciep.UseVisualStyleBackColor = false;
             this.reciep.Click += new System.EventHandler(this.reciep_Click);
             // 
             // txtamtpaid
             // 
-            this.txtamtpaid.Location = new System.Drawing.Point(279, 266);
+            this.txtamtpaid.Location = new System.Drawing.Point(290, 390);
             this.txtamtpaid.Margin = new System.Windows.Forms.Padding(2);
             this.txtamtpaid.Name = "txtamtpaid";
             this.txtamtpaid.Size = new System.Drawing.Size(178, 20);
@@ -68,7 +72,7 @@
             // 
             // txtbal
             // 
-            this.txtbal.Location = new System.Drawing.Point(279, 242);
+            this.txtbal.Location = new System.Drawing.Point(290, 332);
             this.txtbal.Margin = new System.Windows.Forms.Padding(2);
             this.txtbal.Name = "txtbal";
             this.txtbal.Size = new System.Drawing.Size(178, 20);
@@ -76,7 +80,7 @@
             // 
             // txttot
             // 
-            this.txttot.Location = new System.Drawing.Point(279, 219);
+            this.txttot.Location = new System.Drawing.Point(290, 275);
             this.txttot.Margin = new System.Windows.Forms.Padding(2);
             this.txttot.Name = "txttot";
             this.txttot.Size = new System.Drawing.Size(178, 20);
@@ -84,7 +88,7 @@
             // 
             // txtclass
             // 
-            this.txtclass.Location = new System.Drawing.Point(279, 196);
+            this.txtclass.Location = new System.Drawing.Point(290, 218);
             this.txtclass.Margin = new System.Windows.Forms.Padding(2);
             this.txtclass.Name = "txtclass";
             this.txtclass.Size = new System.Drawing.Size(178, 20);
@@ -92,7 +96,7 @@
             // 
             // txtname
             // 
-            this.txtname.Location = new System.Drawing.Point(279, 171);
+            this.txtname.Location = new System.Drawing.Point(290, 161);
             this.txtname.Margin = new System.Windows.Forms.Padding(2);
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(178, 20);
@@ -101,120 +105,161 @@
             // ampaid
             // 
             this.ampaid.AutoSize = true;
-            this.ampaid.Location = new System.Drawing.Point(202, 270);
+            this.ampaid.BackColor = System.Drawing.Color.Transparent;
+            this.ampaid.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ampaid.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ampaid.ForeColor = System.Drawing.Color.PaleGoldenrod;
+            this.ampaid.Location = new System.Drawing.Point(163, 390);
             this.ampaid.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ampaid.Name = "ampaid";
-            this.ampaid.Size = new System.Drawing.Size(66, 13);
+            this.ampaid.Size = new System.Drawing.Size(95, 16);
             this.ampaid.TabIndex = 24;
-            this.ampaid.Text = "amount paid";
+            this.ampaid.Text = "Amount Paid:";
             // 
             // balan
             // 
             this.balan.AutoSize = true;
-            this.balan.Location = new System.Drawing.Point(217, 244);
+            this.balan.BackColor = System.Drawing.Color.Transparent;
+            this.balan.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.balan.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.balan.ForeColor = System.Drawing.Color.PaleGoldenrod;
+            this.balan.Location = new System.Drawing.Point(163, 333);
             this.balan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.balan.Name = "balan";
-            this.balan.Size = new System.Drawing.Size(44, 13);
+            this.balan.Size = new System.Drawing.Size(63, 16);
             this.balan.TabIndex = 23;
-            this.balan.Text = "balance";
+            this.balan.Text = "Balance:";
             // 
             // tfees
             // 
             this.tfees.AutoSize = true;
-            this.tfees.Location = new System.Drawing.Point(211, 223);
+            this.tfees.BackColor = System.Drawing.Color.Transparent;
+            this.tfees.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.tfees.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tfees.ForeColor = System.Drawing.Color.PaleGoldenrod;
+            this.tfees.Location = new System.Drawing.Point(163, 276);
             this.tfees.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.tfees.Name = "tfees";
-            this.tfees.Size = new System.Drawing.Size(53, 13);
+            this.tfees.Size = new System.Drawing.Size(77, 16);
             this.tfees.TabIndex = 22;
-            this.tfees.Text = "total fees";
+            this.tfees.Text = "Total Fees:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(222, 198);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label3.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.PaleGoldenrod;
+            this.label3.Location = new System.Drawing.Point(163, 219);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 13);
+            this.label3.Size = new System.Drawing.Size(47, 16);
             this.label3.TabIndex = 21;
-            this.label3.Text = "class";
+            this.label3.Text = "Class:";
             // 
             // Nam
             // 
             this.Nam.AutoSize = true;
-            this.Nam.Location = new System.Drawing.Point(202, 171);
+            this.Nam.BackColor = System.Drawing.Color.Transparent;
+            this.Nam.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Nam.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nam.ForeColor = System.Drawing.Color.PaleGoldenrod;
+            this.Nam.Location = new System.Drawing.Point(163, 162);
             this.Nam.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Nam.Name = "Nam";
-            this.Nam.Size = new System.Drawing.Size(55, 13);
+            this.Nam.Size = new System.Drawing.Size(48, 16);
             this.Nam.TabIndex = 20;
-            this.Nam.Text = "first name";
+            this.Nam.Text = "Name:";
             // 
             // stID
             // 
             this.stID.AutoSize = true;
-            this.stID.Location = new System.Drawing.Point(202, 149);
+            this.stID.BackColor = System.Drawing.Color.Transparent;
+            this.stID.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.stID.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stID.ForeColor = System.Drawing.Color.PaleGoldenrod;
+            this.stID.Location = new System.Drawing.Point(163, 107);
             this.stID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.stID.Name = "stID";
-            this.stID.Size = new System.Drawing.Size(58, 13);
+            this.stID.Size = new System.Drawing.Size(81, 16);
             this.stID.TabIndex = 19;
-            this.stID.Text = "student ID";
+            this.stID.Text = "Student ID:";
             // 
             // fess
             // 
             this.fess.AutoSize = true;
-            this.fess.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fess.Location = new System.Drawing.Point(252, 35);
+            this.fess.BackColor = System.Drawing.Color.Transparent;
+            this.fess.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.fess.Font = new System.Drawing.Font("Britannic Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fess.ForeColor = System.Drawing.Color.PaleGoldenrod;
+            this.fess.Location = new System.Drawing.Point(251, 45);
             this.fess.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.fess.Name = "fess";
-            this.fess.Size = new System.Drawing.Size(117, 17);
+            this.fess.Size = new System.Drawing.Size(167, 21);
             this.fess.TabIndex = 33;
-            this.fess.Text = "fees Management";
+            this.fess.Text = "FEES MANAGEMENT";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(279, 146);
+            this.comboBox1.Location = new System.Drawing.Point(290, 104);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(178, 21);
             this.comboBox1.TabIndex = 34;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(472, 143);
+            this.button1.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(491, 101);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(57, 24);
+            this.button1.Size = new System.Drawing.Size(68, 23);
             this.button1.TabIndex = 35;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Text = "SEARCH";
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(590, 435);
+            this.button2.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(422, 441);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(57, 24);
+            this.button2.Size = new System.Drawing.Size(68, 23);
             this.button2.TabIndex = 36;
-            this.button2.Text = "Close";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Text = "CLOSE";
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(387, 290);
+            this.button3.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(318, 441);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(57, 24);
+            this.button3.Size = new System.Drawing.Size(68, 23);
             this.button3.TabIndex = 37;
-            this.button3.Text = "Update";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Text = "UPDATE";
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // FeesManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(658, 470);
+            this.BackgroundImage = global::SCHOOL_MANAGEMENT_SYSTEM.Properties.Resources._111;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(658, 496);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);

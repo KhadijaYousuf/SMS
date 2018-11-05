@@ -18,18 +18,24 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             InitializeComponent();
         }
 
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "")
+            if (comboBox2.Text == "" || comboBox4.Text != "")
             {
                 SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ACER\Documents\SMS.mdf;Integrated Security=True;Connect Timeout=30");
                 con.Open();
-                SqlCommand cmd = new SqlCommand("select *from Homework where Class='" + textBox1.Text + "'", con);
+                SqlCommand cmd = new SqlCommand("select *from Homework where Class='" + comboBox4.Text + "'", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable DT = new DataTable();
+                da.Fill(DT);
+                dataGridView1.DataSource = DT;
+                con.Close();
+            }
+            else if(comboBox2.Text != "" || comboBox4.Text != "")
+            {
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ACER\Documents\SMS.mdf;Integrated Security=True;Connect Timeout=30");
+                con.Open();
+                SqlCommand cmd = new SqlCommand("select *from Homework where Class='" + comboBox4.Text + "' && Subject ='" + comboBox2.Text + "'", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable DT = new DataTable();
                 da.Fill(DT);
@@ -38,7 +44,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             }
             else
             {
-                MessageBox.Show("FAILED");
+                MessageBox.Show("Class and Subject Missing");
             }
         }
 
@@ -59,21 +65,36 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             da.Fill(DT);
             dataGridView1.DataSource = DT;
             con.Close();
-            textBox1.Text = "";
-            textBox1.Enabled = false;
+            comboBox4.Enabled = false;
+            comboBox2.Enabled = false;
+
+            this.Hide();
+            NotificationDetails HD = new NotificationDetails();
+            HD.label1.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            HD.ShowDialog();
         }
 
         private void homeWorkToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ACER\Documents\SMS.mdf;Integrated Security=True;Connect Timeout=30");
-            con.Open();
-            SqlCommand cmd = new SqlCommand("select *from Homework", con);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable DT = new DataTable();
-            da.Fill(DT);
-            dataGridView1.DataSource = DT;
-            textBox1.Enabled = true;
-            con.Close();
+            comboBox4.Enabled = true;
+            comboBox2.Enabled = true;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            
+        }
+
+        private void dataGridView1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            HomeworkDetails HD = new HomeworkDetails();
+            HD.label5.Text = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            HD.label6.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            HD.label7.Text = this.dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            HD.label8.Text = this.dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            HD.ShowDialog();
         }
     }
 }

@@ -24,7 +24,7 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             {
                 SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ACER\Documents\SMS.mdf;Integrated Security=True;Connect Timeout=30");
                 con.Open();
-                SqlCommand cmd = new SqlCommand("insert into FeesAdmin(SID, Name, Class, TotalFees, Balance, AmountPaid) values('" + comboBox1.Text + "', '" + txtname.Text + "', '" + txtclass.Text + "', '" + txttot.Text + "', '" + txtbal.Text + "', '" + txtamtpaid.Text + "')", con);
+                SqlCommand cmd = new SqlCommand("insert into FeesAdmin(StudentId, Name, Class, TotalFees, Balance, AmountPaid) values('" + comboBox1.Text + "', '" + txtname.Text + "', '" + txtclass.Text + "', '" + txttot.Text + "', '" + txtbal.Text + "', '" + txtamtpaid.Text + "')", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
@@ -69,8 +69,11 @@ namespace SCHOOL_MANAGEMENT_SYSTEM
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read())
             {
-                txtname.Text = (dr["FN"].ToString());
+                txtname.Text = (dr["FN"].ToString() + dr["LN"].ToString());
                 txtclass.Text = (dr["Class"].ToString());
+                txttot.Text = (dr["TotalFees"].ToString());
+                txtbal.Text = (dr["Balance"].ToString());
+                txtamtpaid.Text = (dr["AmountPaid"].ToString());
             }
         }
 
